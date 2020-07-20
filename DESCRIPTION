@@ -1,0 +1,23 @@
+Package: MethSig
+Type: Package
+Title: DNA Methylation Drivers Inference
+Version: 0.1.0
+Author: Heng Pan
+Maintainer: Heng Pan <dragonriderpku@gmail.com>
+Description: This package is used to infer DNA methylation drivers from bisulfite converted data of cancer cohort.
+License: GPL-2
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    GenomicRanges,
+    betareg,
+    metap,
+    IRanges,
+    S4Vectors
+Depends: 
+    R (>= 2.10)
+RoxygenNote: 7.1.1
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

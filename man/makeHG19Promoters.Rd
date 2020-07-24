@@ -20,6 +20,6 @@ A GRanges object containing promoter annotation.
 Generate promoter annotation of hg19 refseq genes
 }
 \examples{
-makeHG19Promoters(2000, 2000)
-makeHG19Promoters(1000, 1000)
+makeHG19Promoters(up = 2000, down = 2000)
+
 }

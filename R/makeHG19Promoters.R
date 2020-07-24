@@ -6,9 +6,8 @@
 #'     the transcription start site.
 #' @return A GRanges object containing promoter annotation.
 #' @examples
-#' makeHG19Promoters(2000, 2000)
-#' makeHG19Promoters(1000, 1000)
-
+#' makeHG19Promoters(up = 2000, down = 2000)
+#'
 makeHG19Promoters <- function(up=2000, down=2000) {
   genes <- invisible(geneAnnoHG19)
   pro <- GenomicRanges::promoters(genes, upstream=up, downstream=down)

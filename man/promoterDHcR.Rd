@@ -34,6 +34,7 @@ Promoter differentially hypermethylated cytosine ratio (DHcR) was defined as the
     hypermethylated cytosines (HCs) to the total number of promoter CpGs profiled.
 }
 \examples{
-promoterDHcR(system.file("extdata", "DMC.SRR2069925.txt", package = "MethSig"), pro=pro)
+promoterDHcR(file_name = system.file("extdata", "DMC.SRR2069925.txt", package = "MethSig"),
+             pro = pro)
 
 }

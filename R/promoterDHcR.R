@@ -19,7 +19,8 @@
 #'       \item DHcR: DHcR level
 #'     }
 #' @examples
-#' promoterDHcR(system.file("extdata", "DMC.SRR2069925.txt", package = "MethSig"), pro=pro)
+#' promoterDHcR(file_name = system.file("extdata", "DMC.SRR2069925.txt", package = "MethSig"),
+#'              pro = pro)
 #'
 promoterDHcR <- function(file_name, pro, min_cpgs=5) {
   example <- read.table(file_name, sep='\t')

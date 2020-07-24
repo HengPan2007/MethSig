@@ -13,7 +13,8 @@
 #'       \item PDR: PDR level
 #'     }
 #' @examples
-#' promoterPDR(system.file("extdata", "PDR.SRR2069925.txt", package = "MethSig"), pro=pro)
+#' promoterPDR(file_name = system.file("extdata", "PDR.SRR2069925.txt", package = "MethSig"),
+#'             pro = pro)
 #'
 promoterPDR <- function(file_name, pro, min_cpgs = 3) {
   data <- read.table(file_name, header=T, sep='\t')

@@ -11,7 +11,7 @@ makeInputMatrix(names_list, matCV, pro, input_dir, min_cpgs = c(5, 3))
 
 \item{matCV}{A matrix of covariates which are included into the analysis. Ideally, users can include any covariate
 that will be correlated with promoter DHcR in tumor samples and a hugo symbol column needs to be included.
-An example can be loaded by using invisible(matCV). This covariate matrix contains following columns:
+An example can be loaded by using \emph{invisible(matCV)}. This covariate matrix contains following columns:
 Hugo, DHcR_Normal, PDR_Normal, GEXP_Normal, Reptime.}
 
 \item{pro}{A GRanges object containing promoter annotation.}
@@ -21,8 +21,8 @@ are stored.
 Input files used to calculate DHcR should be named as DMC.sample_name.txt format.
 Input files used to calculate PDR should be named as PDR.sample_name.txt format.}
 
-\item{min_cpgs}{A list of two integer values (Minimum number of CpGs requied by promoterDHcR,
-Minimum number of CpGs required by promoterPDR).}
+\item{min_cpgs}{A list of two integer values: the minimum number of CpGs requied by \emph{promoterDHcR} and
+the minimum number of CpGs required by \emph{promoterPDR}.}
 }
 \value{
 A data frame used as input for patient-specific hypermethylation inference.

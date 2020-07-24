@@ -5,7 +5,8 @@
 #'     cytosines (DMCs) with following columns (V1 to V11): chr, pos, numC in control, numC + numT in control,
 #'     numC in tumor, numC + numT in tumor, CpG methylation ratio (tumor methylation / control methylation),
 #'     chi-squared test p-value, adjusted p-value, significance, hyper or hypo in tumor.
-#'     Details of generating this type of files were described in Pan et al, Cancer Systems Biology, 2018.
+#'     Details of generating this type of files were described in Pan \emph{et al.},
+#'     \emph{Cancer Systems Biology}, 2018.
 #' @param pro A GRanges object containing promoter annotation.
 #' @param min_cpgs An integer value defining minimum number of covered CpGs for each promoter.
 #' @return A data frame summarizing promoter DHcR levels.

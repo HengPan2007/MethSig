@@ -13,7 +13,8 @@ Imports:
     betareg,
     metap,
     IRanges,
-    S4Vectors
+    S4Vectors,
+    multtest
 Depends: 
     R (>= 2.10)
 RoxygenNote: 7.1.1

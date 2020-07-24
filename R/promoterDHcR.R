@@ -1,11 +1,8 @@
 #' @title Calculate promoter DHcR
 #' @description Promoter differentially hypermethylated cytosine ratio (DHcR) was defined as the ratio of
 #'     hypermethylated cytosines (HCs) to the total number of promoter CpGs profiled.
-#' @details HCs of each sample were defined as CpGs at which DNAme is statistically higher than
-#'     the average DNAme of control samples (FDR = 20\%, Chi-squared test). Only CpGs with read depth
-#'     greater than 10 reads were included in the analysis.
 #' @param file_name A tab-separated values input file. The input file contains details of differentially methylated
-#'     cytosines with following columns (V1 to V11): chr, pos, numC in control, numC+numT in control,
+#'     cytosines (DMCs) with following columns (V1 to V11): chr, pos, numC in control, numC+numT in control,
 #'     numC in tumor, numC + numT in tumor, CpG methylation ratio (tumor methylation / control methylation),
 #'     chi-squared p-value, adjusted p-value, significance, hyper or hypo in tumor.
 #'     Details of generating this type of files were described in Pan et al, Cancer Systems Biology, 2018.
@@ -24,6 +21,7 @@
 #'
 promoterDHcR <- function(file_name, pro, min_cpgs=5) {
   example <- read.table(file_name, sep='\t')
+  example$V11 <- as.factor(example$V11)
   anno <- GenomicRanges::GRanges(seqnames=S4Vectors::Rle(example$V1),
                                  ranges=IRanges::IRanges(start=example$V2, end=example$V2))
   index <- as.list(GenomicRanges::findOverlaps(pro, anno, ignore.strand=T))

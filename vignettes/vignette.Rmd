@@ -16,12 +16,19 @@ knitr::opts_chunk$set(
 )
 ```
 
+
 ```{r setup}
 library(MethSig)
 ```
 
 ## Introduction
 MethSig is used to used to infer DNA methylation drivers from bisulfite converted data of cancer cohort.
+
+## Setup
+```{r eval = F}
+install.packages("devtools")
+devtools::install_github("HengPan2007/MethSig")
+```
 
 ## Prerequisite
 

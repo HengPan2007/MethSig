@@ -7,9 +7,11 @@
 makeHG19Promoters(up = 2000, down = 2000)
 }
 \arguments{
-\item{up}{Single integer value >= 0L. Define the number of nucleotides toward the 5' end relative to the transcription start site.}
+\item{up}{An integer value defining the number of nucleotides toward the 5' end relative to
+the transcription start site.}
 
-\item{down}{Single integer value >= 0L. Define the number of nucleotides toward the 3' end relative to the transcription start site.}
+\item{down}{An integer value defining the number of nucleotides toward the 3' end relative to
+the transcription start site.}
 }
 \value{
 A GRanges object containing promoter annotation.

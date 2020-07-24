@@ -39,6 +39,6 @@ A data frame used as input for hypermethylation inference.
 Add DHcR, PDR and sequencing depth information of samples to be infered into input matrix.
 }
 \examples{
-makeInputMatrix(names.list, matCV, pro, input.dir)
+makeInputMatrix(names_list, matCV, pro, input.dir)
 
 }

@@ -12,7 +12,7 @@
 #'     Input files used to calculate PDR should be named as PDR.sample_name.txt format.
 #' @param min_cpgs A list of two integer values: the minimum number of CpGs requied by \emph{promoterDHcR} and
 #'     the minimum number of CpGs required by \emph{promoterPDR}.
-#' @return A data frame used as input for patient-specific hypermethylation inference.
+#' @return A data frame used as input for sample-specific hypermethylation inference.
 #'     \itemize{
 #'       \item Id: Sample id
 #'       \item Hugo: Hugo symbol

@@ -25,7 +25,7 @@ Input files used to calculate PDR should be named as PDR.sample_name.txt format.
 the minimum number of CpGs required by \emph{promoterPDR}.}
 }
 \value{
-A data frame used as input for patient-specific hypermethylation inference.
+A data frame used as input for sample-specific hypermethylation inference.
     \itemize{
       \item Id: Sample id
       \item Hugo: Hugo symbol

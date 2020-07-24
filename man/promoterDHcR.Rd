@@ -17,7 +17,7 @@ Details of generating this type of files were described in Pan \emph{et al.},
 
 \item{pro}{A GRanges object containing promoter annotation.}
 
-\item{min_cpgs}{An integer value defining minimum number of covered CpGs for each promoter.}
+\item{min_cpgs}{An integer value defining the minimum number of covered CpGs for each promoter.}
 }
 \value{
 A data frame summarizing promoter DHcR levels.

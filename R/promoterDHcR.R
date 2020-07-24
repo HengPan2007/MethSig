@@ -9,7 +9,7 @@
 #'     Details of generating this type of files were described in Pan \emph{et al.},
 #'     \emph{Cancer Systems Biology}, 2018.
 #' @param pro A GRanges object containing promoter annotation.
-#' @param min_cpgs An integer value defining minimum number of covered CpGs for each promoter.
+#' @param min_cpgs An integer value defining the minimum number of covered CpGs for each promoter.
 #' @return A data frame summarizing promoter DHcR levels.
 #'     \itemize{
 #'       \item Hugo: Hugo symbol

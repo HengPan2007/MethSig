@@ -1,9 +1,10 @@
 #' @title Calculate promoter DHcR
 #' @description Promoter differentially hypermethylated cytosine ratio (DHcR) was defined as the ratio of
 #'     hypermethylated cytosines (HCs) to the total number of promoter CpGs profiled.
-#' @param file_name A tab-separated values input file. The input file contains details of differentially methylated
-#'     cytosines (DMCs) with following columns (V1 to V11): chr, pos, numC in control, numC + numT in control,
-#'     numC in tumor, numC + numT in tumor, CpG methylation ratio (tumor methylation / control methylation),
+#' @param file_name A tab-separated values input file (without a header line). The input file contains
+#'     details of differentially methylated cytosines (DMCs) with following columns (V1 to V11):
+#'     chr, pos, numC in control, numC + numT in control, numC in tumor, numC + numT in tumor,
+#'     CpG methylation ratio (tumor methylation / control methylation),
 #'     chi-squared test p-value, adjusted p-value, significance, hyper or hypo in tumor.
 #'     Details of generating this type of files were described in Pan \emph{et al.},
 #'     \emph{Cancer Systems Biology}, 2018.

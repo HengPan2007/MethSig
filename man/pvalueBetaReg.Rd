@@ -21,7 +21,7 @@ A data frame summarizing information of sample-specific hypermethylation inferen
     \itemize{
       \item DHcR_Tumor_Beta: Transformed data of DHcR_Tumor (from [0, 1] to (0, 1))
       \item Beta_Response: Response value estimated by beta regression
-      \item Beta_Precision: Precisison value estimated by beta regression
+      \item Beta_Precision: Precision value estimated by beta regression
       \item Pvalue: P-value of sample-specific hypermethylation inference
     }
 }

@@ -11,7 +11,7 @@
 #'       \item Hugo: Hugo symbol
 #'       \item Rank: Rank of the promoter by p-value
 #'       \item Sample_Size: Number of samples evaluated in this promoter
-#'       \item Pvalue: Lower quartile of wilkinson combined p-value from random sampling
+#'       \item Pvalue: Lower quartile of Wilkinson combined p-values from random sampling
 #'       \item Padjust: Benjamini-Hochberg adjusted p-value
 #'     }
 #' @examples

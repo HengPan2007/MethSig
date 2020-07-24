@@ -8,14 +8,14 @@ promoterDHcR(file_name, pro, min_cpgs = 5)
 }
 \arguments{
 \item{file_name}{A tab-separated values input file. The input file contains details of differentially methylated
-cytosines with following columns (V1 to V11): chr, pos, numC in control, numC+numT in control,
+cytosines (DMCs) with following columns (V1 to V11): chr, pos, numC in control, numC + numT in control,
 numC in tumor, numC + numT in tumor, CpG methylation ratio (tumor methylation / control methylation),
-chi-squared p-value, adjusted p-value, significance, hyper or hypo in tumor.
+chi-squared test p-value, adjusted p-value, significance, hyper or hypo in tumor.
 Details of generating this type of files were described in Pan et al, Cancer Systems Biology, 2018.}
 
 \item{pro}{A GRanges object containing promoter annotation.}
 
-\item{min_cpgs}{Single integer value >= 0L. The minimum number of covered CpGs for each promoter.}
+\item{min_cpgs}{An integer value defining minimum number of covered CpGs for each promoter.}
 }
 \value{
 A data frame summarizing promoter DHcR levels.
@@ -31,12 +31,7 @@ A data frame summarizing promoter DHcR levels.
 Promoter differentially hypermethylated cytosine ratio (DHcR) was defined as the ratio of
     hypermethylated cytosines (HCs) to the total number of promoter CpGs profiled.
 }
-\details{
-HCs of each sample were defined as CpGs at which DNAme is statistically higher than
-    the average DNAme of control samples (FDR = 20\%, Chi-squared test). Only CpGs with read depth
-    greater than 10 reads were included in the analysis.
-}
 \examples{
-promoterDHcR('DMC.SRR2069925.txt', pro)
+promoterDHcR(system.file("extdata", "DMC.SRR2069925.txt", package = "MethSig"), pro=pro)
 
 }

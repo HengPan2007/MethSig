@@ -29,6 +29,6 @@ Promoter proportion of discordant reads (PDR) was defined as the average PDR of 
 }
 \examples{
 promoterPDR(file_name = system.file("extdata", "PDR.SRR2069925.txt", package = "MethSig"),
-            pro = pro)
+            pro = makeHG19Promoters())
 
 }

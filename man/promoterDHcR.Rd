@@ -35,6 +35,6 @@ Promoter differentially hypermethylated cytosine ratio (DHcR) was defined as the
 }
 \examples{
 promoterDHcR(file_name = system.file("extdata", "DMC.SRR2069925.txt", package = "MethSig"),
-             pro = pro)
+             pro = makeHG19Promoters())
 
 }

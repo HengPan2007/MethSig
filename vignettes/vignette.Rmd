@@ -16,8 +16,12 @@ knitr::opts_chunk$set(
 )
 ```
 
+```{r setup echo = F}
+library(MethSig)
+```
+
 ## Setup
-```{r}
+```{r, eval = F}
 setRepositories(ind = 1:2)
 install.packages("devtools")
 devtools::install_github('HengPan2007/MethSig', build_vignettes = T)

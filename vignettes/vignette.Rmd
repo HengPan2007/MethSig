@@ -29,15 +29,15 @@ library(MethSig)
 ```
 
 ## Introduction
-MethSig is used to to infer DNA methylation drivers from bisulfite converted data of cancer cohorts.
+MethSig is used to infer DNA methylation drivers from bisulfite converted data of cancer cohorts.
 
 ## Prerequisite
 
 ### 1. Data alignment and processing.
-Bisulfite converted data are aligned and processed as described in our published book chapter (Pan \emph{et al.}, \emph{Cancer Systems Biology}, 2018)
+Bisulfite converted data are aligned and processed as described in the published book chapter (Pan *et al.*, *Cancer Systems Biology*, 2018).
 
-### 2. Preparation of covariate matrix.
-A matrix of covariates, which are used in the beta regression model, is needed. The matrix needs to include a column of hugo gene symbol and at least one column of the covariate. An example can be loaded by \emph{invisible(matCV)}.
+### 2. Covariates matrix Preparation.
+A matrix of covariates, which are used in the beta regression model, is needed. The matrix needs to include a column of hugo gene symbol and at least one column of the covariate. An example can be loaded by *invisible(matCV)*.
 
 ```{r, eval = F}
 matCV <- invisible(matCV)
@@ -49,15 +49,16 @@ head(matCV)
 ```
 
 ### 3. Files containing information of hypermethylated cytosine (HCs).
-A tab-separated values input file (without a header line). The input file contains details of differentially methylated cytosines (DMCs) with following columns (V1 to V11): chr, pos, numC in control, numC + numT in control, numC in tumor, numC + numT in tumor, CpG methylation ratio (tumor methylation / control methylation), chi-squared test p-value, adjusted p-value, significance, hyper or hypo in tumor. Details of generating this type of files were described in Pan \emph{et al.}, \emph{Cancer Systems Biology}, 2018. An example file can be found in extdata/DMC.SRR2069925.txt. Notably, the name needs to be in DMC.Sample_name.txt format.
+A tab-separated values input file (without a header line). The input file contains details of differentially methylated cytosines (DMCs) with following columns (V1 to V11): chr, pos, numC in control, numC + numT in control, numC in tumor, numC + numT in tumor, CpG methylation ratio (tumor methylation / control methylation), chi-squared test p-value, adjusted p-value, significance, hyper or hypo in tumor. Details of generating this type of files were described in Pan *et al.*, *Cancer Systems Biology*, 2018. An example file can be found in extdata/DMC.SRR2069925.txt. Notably, the name needs to be in DMC.Sample_name.txt format.
 
 ```{r, echo = F}
-tmp <- read.table(system.file("extdata", "DMC.SRR2069925.txt", package = "MethSig"),
-                  sep='\t')
+tmp <- read.table(system.file("extdata", "DMC.SRR2069925.txt", package = "MethSig"), sep='\t')
 head(tmp)
 ```
 
 ### 4. Files containing information of proportion of discordant reads (PDR) at CpGs 
+A tab-separated values input file. The input file contains details of single CpG PDR with following columns: chr, start, strand, ConMethReadCount, ConUMethReadCount, DisReadCount, NAReadCount. Details of PDR were described in Landau *et al.*, *Cancer Cell*, 2014. extdata/pdrCall_from_Bismark.py can be used to call PDR of single CpG from Bismark (Krueger *et al.*, *Binoinformatics*, 2011) outputs files starting with CpG_OB or CpG_OT.
+
 A tab-separated values input file. The input file contains PDR of single CpG with following columns: chr, start, strand, ConMethReadCount, ConUMethReadCount, DisReadCount, NAReadCount. Details of PDR were described in Landau et al., Cancer Cell, 2014. extdata/pdrCall_from_Bismark.py can be used to call PDR of single CpG from Bismark outputs (files starting with CpG_OB or CpG OT). An example file can be found in extdata/PDR.SRR2069925.txt. Notably, the name needs to be in PDR.sample_name.txt format.
 
 ```{r, echo=F, eval=F}

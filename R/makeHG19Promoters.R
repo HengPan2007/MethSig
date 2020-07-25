@@ -1,4 +1,4 @@
-#' Generate promoter annotation of hg19 refseq genes
+#' Generate promoter annotation of hg19 RefSeq genes
 #'
 #' @param up An integer value defining the number of nucleotides toward the 5' end relative to
 #'     the transcription start site.

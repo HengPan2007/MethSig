@@ -2,7 +2,7 @@
 % Please edit documentation in R/makeHG19Promoters.R
 \name{makeHG19Promoters}
 \alias{makeHG19Promoters}
-\title{Generate promoter annotation of hg19 refseq genes}
+\title{Generate promoter annotation of hg19 RefSeq genes}
 \usage{
 makeHG19Promoters(up = 2000, down = 2000)
 }
@@ -17,7 +17,7 @@ the transcription start site.}
 A GRanges object containing promoter annotation.
 }
 \description{
-Generate promoter annotation of hg19 refseq genes
+Generate promoter annotation of hg19 RefSeq genes
 }
 \examples{
 makeHG19Promoters(up = 2000, down = 2000)

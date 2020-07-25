@@ -60,17 +60,18 @@ head(tmp)
 A tab-separated values input file. The input file contains details of single CpG PDR with following columns: chr, start, strand, ConMethReadCount, ConUMethReadCount, DisReadCount, NAReadCount. Details of PDR were described in Landau *et al.*, *Cancer Cell*, 2014. extdata/pdrCall_from_Bismark.py can be used to call PDR of single CpG from Bismark (Krueger *et al.*, *Bioinformatics*, 2011) outputs files starting with CpG_OB or CpG_OT. An example file can be found in extdata/PDR.SRR2069925.txt. Notably, the name needs to be in PDR.sample_name.txt format.
 
 ```{r, echo=F}
-tmp <- read.table(system.file("extdata", "PDR.SRR2069925.txt", package = "MethSig"), sep='\t')
+tmp <- read.table(system.file("extdata", "PDR.SRR2069925.txt", package = "MethSig"), header=T, sep='\t')
 head(tmp)
 ```
 
 ## Make input matrix
 
 ### 1. Calculate promoter DHcR
-Promoter (defined as ± 2kb windows centered on Refseq transcription start site) hypermethylation was measured using differentially hypermethylated cytosine ratio (DHcR), defined as the ratio of hypermethylated cytosines (HCs) to the total number of promoter CpGs profiled. HCs of each sample were defined as CpGs at which DNAme is statistically higher than the average DNAme of control samples (false discovery rate=20%, Chi-squared test). Only CpGs with read depth greater than 10 reads were included in the analysis. RRBS data of matched normal tissues were used as control samples. An implemented function makeHG19Promoters was used to provide promoter annotations of hg19 refSeq genes. Users and use their own annotations instead.
+Promoter (defined as ± 2kb windows centered on RefSeq transcription start site) hypermethylation was measured using differentially hypermethylated cytosine ratio (DHcR), defined as the ratio of hypermethylated cytosines (HCs) to the total number of promoter CpGs profiled. HCs of each sample were defined as CpGs at which DNAme is statistically higher than the average DNAme of control samples (false discovery rate = 20%, Chi-squared test). Only CpGs with read depth greater than 10 were included in the analysis. RRBS data of normal samples were used as control. An implemented function *makeHG19Promoters* was used to provide promoter annotations of hg19 RefSeq genes. Users and define their own annotation.
 
-```{r, eval=F}
-dhcr <- promoterDHcR(file_name = '~/MethSig/inst/extdata/DMC.SRR2069925.txt', pro = makeHG19Promoters())
+```{r}
+dhcr <- promoterDHcR(file_name = system.file("extdata", "DMC.SRR2069925.txt", package = "MethSig"),
+                     pro = makeHG19Promoters())
 head(dhcr)
 ```
 

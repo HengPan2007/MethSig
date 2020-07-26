@@ -158,7 +158,7 @@ head(pdr)
 
 As mentioned in the **Prerequisite** section, users need to put
 DMC.sample\_name.txt and PDR.sample\_name.txt files in the input\_dir
-folder. Also, a user defined covarites matrix is needed.
+folder. Also, a user defined covariates matrix is needed.
 
 ``` r
 ds <- makeInputMatrix(names_list = as.list("SRR2069925"),

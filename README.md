@@ -26,7 +26,7 @@ BiocManager::install("GenomeInfoDbData")
 
 ## Introduction
 
-MethSig is used to infer DNA methylation drivers from bisulfite
+MethSig is used to infer DNA methylation (DNAme) drivers from bisulfite
 converted data of cancer cohorts.
 
 ## Prerequisite

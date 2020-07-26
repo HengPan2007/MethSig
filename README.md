@@ -1,4 +1,4 @@
-Introduction to the MethSig pacakge
+Introduction to MethSig
 ================
 Heng Pan
 2020-07-26

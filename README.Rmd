@@ -1,5 +1,5 @@
 ---
-title: "Introduction to the MethSig pacakge"
+title: "Introduction to MethSig"
 author: "Heng Pan"
 date: "`r Sys.Date()`"
 output: github_document

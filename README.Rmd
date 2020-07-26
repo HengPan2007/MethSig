@@ -57,17 +57,17 @@ head(tmp)
 ```
 
 ### 4. Files containing information of proportion of discordant reads (PDR) at CpGs 
-A tab-separated values input file contains details of single CpG PDR with following columns: chr, start, strand, ConMethReadCount, ConUMethReadCount, DisReadCount, NAReadCount. Details of PDR were described in Landau *et al.*, *Cancer Cell*, 2014. extdata/pdrCall_from_Bismark.py can be used to call PDR of single CpG from Bismark (Krueger *et al.*, *Bioinformatics*, 2011) outputs files starting with CpG_OB or CpG_OT. An example file can be found in extdata/PDR.SRR2069925.txt. Notably, the name needs to be in PDR.sample_name.txt format.
+A tab-separated values input file contains details of single CpG PDR with following columns: chr, start, strand, ConMethReadCount, ConUMethReadCount, DisReadCount, NAReadCount. Details of PDR were described in Landau *et al.*, *Cancer Cell*, 2014. extdata/pdrCall_from_Bismark.py can be used to call PDR of single CpG from Bismark (Krueger *et al.*, *Bioinformatics*, 2011) output files starting with CpG_OB or CpG_OT. An example file can be found in extdata/PDR.SRR2069925.txt. Notably, the name needs to be in PDR.sample_name.txt format.
 
 ```{r, echo=F}
 tmp <- read.table("~/MethSig/inst/extdata/PDR.SRR2069925.txt", header=T, sep="\t")
 head(tmp)
 ```
 
-## Make input matrix
+## Input matrix generation
 
-### 1. Calculate promoter DHcR
-Promoter (defined as ± 2kb windows centered on RefSeq transcription start site) hypermethylation is measured using differentially hypermethylated cytosine ratio (DHcR), defined as the ratio of hypermethylated cytosines (HCs) to the total number of promoter CpGs profiled. HCs of each sample are defined as CpGs at which DNAme is statistically higher than the average DNAme of control samples (false discovery rate = 20%, Chi-squared test). Only CpGs with read depth greater than 10 are included in the analysis. RRBS data of normal samples are used as control. An implemented function *makeHG19Promoters* can be used to provide promoter annotations of hg19 RefSeq genes. Users and define their own annotation.
+### 1. Promoter DHcR calculation
+Promoter (defined as ± 2kb window centered on RefSeq transcription start site) hypermethylation is measured using differentially hypermethylated cytosine ratio (DHcR), defined as the ratio of hypermethylated cytosines (HCs) to the total number of promoter CpGs profiled. HCs of each sample are defined as CpGs at which DNAme is statistically higher than the average DNAme of control samples (false discovery rate = 20%, Chi-squared test). Only CpGs with read depth greater than 10 are included in the analysis. RRBS data of normal samples are used as control. An implemented function *makeHG19Promoters* can be used to provide promoter annotations of hg19 RefSeq genes. Users and define their own annotation.
 
 ```{r, eval = F}
 dhcr <- promoterDHcR(file_name = system.file("extdata", "DMC.SRR2069925.txt", package = "MethSig"),
@@ -80,7 +80,7 @@ dhcr <- promoterDHcR(file_name = "~/MethSig/inst/extdata/DMC.SRR2069925.txt",
 head(dhcr)
 ```
 
-### 2. Calculate promoter PDR
+### 2. Promoter PDR calculation
 If all the CpGs on a specific read are methylated, or all the CpGs on a read are unmethylated, the read is classified as concordant; otherwise it is classified as discordant. At each CpG, the PDR is equal to the number of discordant reads that cover that location divided by the total number of reads that cover that location. The PDR of promoter is given by averaging the values of individual CpGs, as calculated for all CpGs within the promoter of interest with equal or greater than 10 reads covering at least 4 CpGs.
 
 ```{r, eval = F}
@@ -94,7 +94,7 @@ pdr <- promoterPDR(file_name = "~/MethSig/inst/extdata/PDR.SRR2069925.txt",
 head(pdr)
 ```
 
-### 3. Make input matrix
+### 3. Input matrix generation
 As mentioned in **Prerequisite** section, users need to put DMC.sample_name.txt and PDR.sample_name.txt files in the input_dir folder. Also, a user defined covarites matrix is needed.
 ```{r, eval = F}
 ds <- makeInputMatrix(names_list = as.list("SRR2069925"),

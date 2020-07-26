@@ -76,7 +76,7 @@ with following columns: chr, start, strand, ConMethReadCount,
 ConUMethReadCount, DisReadCount, NAReadCount. Details of PDR were
 described in Landau *et al.*, *Cancer Cell*, 2014.
 extdata/pdrCall\_from\_Bismark.py can be used to call PDR of single CpG
-from Bismark (Krueger *et al.*, *Bioinformatics*, 2011) outputs files
+from Bismark (Krueger *et al.*, *Bioinformatics*, 2011) output files
 starting with CpG\_OB or CpG\_OT. An example file can be found in
 extdata/PDR.SRR2069925.txt. Notably, the name needs to be in
 PDR.sample\_name.txt
@@ -97,21 +97,21 @@ PDR.sample\_name.txt
     #> 5          19
     #> 6          19
 
-## Make input matrix
+## Input matrix generation
 
-### 1\. Calculate promoter DHcR
+### 1\. Promoter DHcR calculation
 
-Promoter (defined as ± 2kb windows centered on RefSeq transcription
-start site) hypermethylation is measured using differentially
-hypermethylated cytosine ratio (DHcR), defined as the ratio of
-hypermethylated cytosines (HCs) to the total number of promoter CpGs
-profiled. HCs of each sample are defined as CpGs at which DNAme is
-statistically higher than the average DNAme of control samples (false
-discovery rate = 20%, Chi-squared test). Only CpGs with read depth
-greater than 10 are included in the analysis. RRBS data of normal
-samples are used as control. An implemented function *makeHG19Promoters*
-can be used to provide promoter annotations of hg19 RefSeq genes. Users
-and define their own
+Promoter (defined as ± 2kb window centered on RefSeq transcription start
+site) hypermethylation is measured using differentially hypermethylated
+cytosine ratio (DHcR), defined as the ratio of hypermethylated cytosines
+(HCs) to the total number of promoter CpGs profiled. HCs of each sample
+are defined as CpGs at which DNAme is statistically higher than the
+average DNAme of control samples (false discovery rate = 20%,
+Chi-squared test). Only CpGs with read depth greater than 10 are
+included in the analysis. RRBS data of normal samples are used as
+control. An implemented function *makeHG19Promoters* can be used to
+provide promoter annotations of hg19 RefSeq genes. Users and define
+their own
 annotation.
 
 ``` r
@@ -128,7 +128,7 @@ head(dhcr)
     #> 120  ACAP3 40.36500   5  200 0.025
     #> 123  ACBD3 36.91892   0   37 0.000
 
-### 2\. Calculate promoter PDR
+### 2\. Promoter PDR calculation
 
 If all the CpGs on a specific read are methylated, or all the CpGs on a
 read are unmethylated, the read is classified as concordant; otherwise
@@ -154,7 +154,7 @@ head(pdr)
     #> 93    ABL2 0.02704556
     #> 103  ABTB2 0.04380624
 
-### 3\. Make input matrix
+### 3\. Input matrix generation
 
 As mentioned in **Prerequisite** section, users need to put
 DMC.sample\_name.txt and PDR.sample\_name.txt files in the input\_dir

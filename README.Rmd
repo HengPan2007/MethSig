@@ -37,12 +37,7 @@ MethSig is used to infer DNA methylation drivers from bisulfite converted data o
 Bisulfite converted data is aligned and processed as described in the published book chapter (Pan *et al.*, *Cancer Systems Biology*, 2018).
 
 ### 2. Covariate matrix preparation
-A matrix of covariates used in the beta regression model is needed. The matrix needs to include a column of hugo gene symbol and at least one column of a covariate. An example can be loaded by *invisible(matCV)*.
-
-```{r, eval = F}
-matCV <- invisible(matCV)
-```
-This example matrix includes Hugo symbol (Hugo), average promoter DHcR level in control samples (DHcR_Normal), average promoter PDR level in control samples (PDR_Normal), average gene expression level in control samples (GEXP_Normal) and DNA replication time (Reptime). Users can define their own covariates.
+A matrix of covariates used in the beta regression model is needed. The matrix needs to include a column of hugo gene symbol and at least one column of a covariate. An example can be loaded by *invisible(matCV)*. This example matrix includes Hugo symbol (Hugo), average promoter DHcR level in control samples (DHcR_Normal), average promoter PDR level in control samples (PDR_Normal), average gene expression level in control samples (GEXP_Normal) and DNA replication time (Reptime). Users can define their own covariates.
 
 ```{r, echo = F}
 head(matCV)

@@ -3,7 +3,7 @@
 #' @param file_name A tab-separated values input file containing details of single CpG PDR with
 #'     following columns: chr, start, strand, ConMethReadCount, ConUMethReadCount, DisReadCount, NAReadCount.
 #'     Details of PDR were described in Landau \emph{et al.}, \emph{Cancer Cell}, 2014.
-#'     extdata/pdrCall_from_Bismark.py can be used to call PDR of single CpG from
+#'     extdata/pdrCall_from_Bismark.py can be used to call PDR of an individual CpG from
 #'     Bismark (Krueger \emph{et al.}, \emph{Bioinformatics}, 2011) outputs (files starting with CpG_OB or CpG_OT).
 #' @param pro A GRanges object containing promoter annotation.
 #' @param min_cpgs An integer value defining the minimum number of available CpGs for each promoter.

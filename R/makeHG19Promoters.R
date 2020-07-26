@@ -1,8 +1,8 @@
 #' Generate promoter annotation of hg19 RefSeq genes
 #'
-#' @param up An integer value defining the number of nucleotides toward the 5' end relative to
+#' @param up An integer value defining the number of nucleotides towards the 5' end relative to
 #'     the transcription start site.
-#' @param down An integer value defining the number of nucleotides toward the 3' end relative to
+#' @param down An integer value defining the number of nucleotides towards the 3' end relative to
 #'     the transcription start site.
 #' @return A GRanges object containing promoter annotation.
 #' @examples

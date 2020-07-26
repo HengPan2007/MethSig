@@ -53,8 +53,8 @@ methylation / control methylation), chi-squared test p-value, adjusted
 p-value, significance, hyper or hypo in tumor. Details of generating
 this type of files were described in Pan *et al.*, *Cancer Systems
 Biology*, 2018. An example file can be found in
-extdata/DMC.SRR2069925.txt. Notably, the name needs to be in
-DMC.sample\_name.txt format.
+extdata/DMC.SRR2069925.txt. Notably, files need to be named as
+DMC.sample\_name.txt.
 
     #>     V1     V2  V3  V4 V5 V6    V7      V8 V9 V10 V11
     #> 1 chr1  10497 461 562 79 90 1.071 0.23325  1   -   -
@@ -73,9 +73,8 @@ described in Landau *et al.*, *Cancer Cell*, 2014.
 extdata/pdrCall\_from\_Bismark.py can be used to call PDR of an
 individual CpG from Bismark (Krueger *et al.*, *Bioinformatics*, 2011)
 output files starting with CpG\_OB or CpG\_OT. An example file can be
-found in extdata/PDR.SRR2069925.txt. Notably, the name needs to be in
-PDR.sample\_name.txt
-    format.
+found in extdata/PDR.SRR2069925.txt. Notably, files need to be named as
+PDR.sample\_name.txt.
 
     #>    chr  start strand ConMethReadCount ConUMethReadCount DisReadCount
     #> 1 chr1  10497      +                0                 0            0

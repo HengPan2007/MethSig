@@ -107,7 +107,7 @@ ds <- makeInputMatrix(names_list = as.list("SRR2069925"),
 head(ds)
 ```
 ```{r, echo = F}
-head(invisible(inputMat))
+head(invisible(inputMatExample))
 ```
 ## Sample-specific hypermethylation inference
 Expected promoter DHcR of tumor samples is estimated by beta regression model and expected DHcR is tested against observed DHcR to infer hypermethylation status.

@@ -163,7 +163,7 @@ head(pdr)
 ### 3\. Input matrix generation
 
 As mentioned in the **Prerequisite** section, users need to put
-DMC.sample\_name.txt and PDR.sample\_name.txt files in the input\_dir
+DMC.sample\_name.txt and PDR.sample\_name.txt files in the *input\_dir*
 folder. Also, a user defined covariate matrix is needed.
 
 ``` r
@@ -174,20 +174,20 @@ ds <- makeInputMatrix(names_list = as.list("SRR2069925"),
 head(ds)
 ```
 
-    #>           Id   Hugo DHcR_Normal  PDR_Normal GEXP_Normal    Reptime  PDR_Tumor
-    #> 1 SRR2069926 A4GALT   -0.126499  0.12442306  1.33315372 -1.1379561 0.11196453
-    #> 2 SRR2069926   AAAS   -0.126499 -0.67038461  0.97661449 -1.1462431 0.10410410
-    #> 3 SRR2069926   AACS   -0.126499 -0.37628615  0.64288254 -0.5661545 0.11056835
-    #> 4 SRR2069926  AADAT   -0.126499 -0.08258285 -0.04805863  1.6091775 0.13897421
-    #> 5 SRR2069926  AAGAB   -0.126499 -0.61130311  2.51903184 -0.5081457 0.05119315
-    #> 6 SRR2069926   AAK1   -0.126499 -0.28766984  0.64981415 -0.5537241 0.06419811
+    #>           Id   Hugo DHcR_Normal PDR_Normal GEXP_Normal    Reptime  PDR_Tumor
+    #> 1 SRR2069925 ABCB10 -0.12649901 -0.3666188   1.0297728 -0.6863157 0.06439566
+    #> 2 SRR2069925  ABCD3 -0.12649901 -0.4862479   1.6453271 -0.3921280 0.02900665
+    #> 3 SRR2069925   ABL2 -0.12649901 -0.3398278   2.1078829 -0.5868720 0.02704556
+    #> 4 SRR2069925  ACADM -0.12649901 -0.5184135   1.4140661  0.5608746 0.04907679
+    #> 5 SRR2069925  ACAP3  0.07178416 -0.1074514   0.2976902 -0.7028897 0.06073043
+    #> 6 SRR2069925  ACBD3 -0.12649901 -0.2668689   2.9805750 -0.9473556 0.06904483
     #>   Depth_Tumor CpGs_Tumor DHcR_Tumor
-    #> 1    58.05263         57 0.01754386
-    #> 2    24.27273         11 0.00000000
-    #> 3    32.40541         37 0.00000000
-    #> 4    40.22917         48 0.02083333
-    #> 5    30.52174         23 0.08695652
-    #> 6    46.37500         48 0.02083333
+    #> 1    44.91818        110      0.000
+    #> 2    38.69118         68      0.000
+    #> 3    36.35714         28      0.000
+    #> 4    32.36364         33      0.000
+    #> 5    40.36500        200      0.025
+    #> 6    36.91892         37      0.000
 
 ## Sample-specific hypermethylation inference
 

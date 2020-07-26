@@ -19,12 +19,12 @@ converted data of cancer cohorts.
 
 ## Prerequisite
 
-### 1\. Data alignment and processing.
+### 1\. Data alignment and processing
 
-Bisulfite converted data are aligned and processed as described in the
+Bisulfite converted data is aligned and processed as described in the
 published book chapter (Pan *et al.*, *Cancer Systems Biology*, 2018).
 
-### 2\. Covariates matrix Preparation.
+### 2\. Covariates matrix preparation
 
 A matrix of covariates used in the beta regression model is needed. The
 matrix needs to include a column of hugo gene symbol and at least one
@@ -48,7 +48,7 @@ define their own covariates.
     #> 5  AAGAB   -0.126499 -0.61130311  2.51903184 -0.5081457
     #> 6   AAK1   -0.126499 -0.28766984  0.64981415 -0.5537241
 
-### 3\. Files containing information of hypermethylated cytosines (HCs).
+### 3\. Files containing information of hypermethylated cytosines (HCs)
 
 A tab-separated values input file (without a header line) containing
 details of differentially methylated cytosines (DMCs) with following

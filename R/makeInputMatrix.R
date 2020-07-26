@@ -22,7 +22,7 @@
 #'       \item DHcR_Tumor: DHcR level in tumor samples
 #'     }
 #' @examples
-#' makeInputMatrix(names_list = as.list('SRR2069925'),
+#' makeInputMatrix(names_list = as.list("SRR2069925"),
 #'                 matCV = invisible(matCV),
 #'                 pro = makeHG19Promoters(),
 #'                 input_dir = system.file("extdata", "", package = "MethSig"))

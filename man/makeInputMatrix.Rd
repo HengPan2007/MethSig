@@ -39,7 +39,7 @@ A data frame used as input for sample-specific hypermethylation inference.
 Add DHcR, PDR and sequencing depth information of inferred samples into input matrix.
 }
 \examples{
-makeInputMatrix(names_list = as.list('SRR2069925'),
+makeInputMatrix(names_list = as.list("SRR2069925"),
                 matCV = invisible(matCV),
                 pro = makeHG19Promoters(),
                 input_dir = system.file("extdata", "", package = "MethSig"))

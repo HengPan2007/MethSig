@@ -1,5 +1,5 @@
 #' @title Make input matrix
-#' @description Add DHcR, PDR and sequencing depth information of inferred samples into input matrix.
+#' @description Add DHcR, PDR and sequencing depth information of inferred samples into the input matrix.
 #' @param names_list A list of sample names.
 #' @param matCV A matrix of covariates included in the analysis. Ideally, users can include any covariate
 #'     and a hugo symbol column. An example can be loaded by using \emph{invisible(matCV)}.

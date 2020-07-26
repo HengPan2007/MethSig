@@ -17,8 +17,8 @@ Hugo, DHcR_Normal, PDR_Normal, GEXP_Normal, Reptime.}
 \item{pro}{A GRanges object containing promoter annotation.}
 
 \item{input_dir}{A string indicating where input files used to calculate DHcR and PDR are stored.
-Input files used to calculate DHcR should be named as DMC.sample_name.txt format.
-Input files used to calculate PDR should be named as PDR.sample_name.txt format.}
+Input files used to calculate DHcR should be named as DMC.sample_name.txt.
+Input files used to calculate PDR should be named as PDR.sample_name.txt.}
 
 \item{min_cpgs}{A list of two integer values: the minimum number of CpGs requied by \emph{promoterDHcR} and
 the minimum number of CpGs required by \emph{promoterPDR}.}

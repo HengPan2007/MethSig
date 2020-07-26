@@ -7,8 +7,8 @@
 #'     Hugo, DHcR_Normal, PDR_Normal, GEXP_Normal, Reptime.
 #' @param pro A GRanges object containing promoter annotation.
 #' @param input_dir A string indicating where input files used to calculate DHcR and PDR are stored.
-#'     Input files used to calculate DHcR should be named as DMC.sample_name.txt format.
-#'     Input files used to calculate PDR should be named as PDR.sample_name.txt format.
+#'     Input files used to calculate DHcR should be named as DMC.sample_name.txt.
+#'     Input files used to calculate PDR should be named as PDR.sample_name.txt.
 #' @param min_cpgs A list of two integer values: the minimum number of CpGs requied by \emph{promoterDHcR} and
 #'     the minimum number of CpGs required by \emph{promoterPDR}.
 #' @return A data frame used as input for sample-specific hypermethylation inference.

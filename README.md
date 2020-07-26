@@ -24,7 +24,7 @@ converted data of cancer cohorts.
 Bisulfite converted data is aligned and processed as described in the
 published book chapter (Pan *et al.*, *Cancer Systems Biology*, 2018).
 
-### 2\. Covariates matrix preparation
+### 2\. Covariate matrix preparation
 
 A matrix of covariates used in the beta regression model is needed. The
 matrix needs to include a column of hugo gene symbol and at least one
@@ -158,7 +158,7 @@ head(pdr)
 
 As mentioned in the **Prerequisite** section, users need to put
 DMC.sample\_name.txt and PDR.sample\_name.txt files in the input\_dir
-folder. Also, a user defined covariates matrix is needed.
+folder. Also, a user defined covariate matrix is needed.
 
 ``` r
 ds <- makeInputMatrix(names_list = as.list("SRR2069925"),

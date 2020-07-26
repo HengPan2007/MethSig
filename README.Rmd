@@ -36,7 +36,7 @@ MethSig is used to infer DNA methylation drivers from bisulfite converted data o
 ### 1. Data alignment and processing
 Bisulfite converted data is aligned and processed as described in the published book chapter (Pan *et al.*, *Cancer Systems Biology*, 2018).
 
-### 2. Covariates matrix preparation
+### 2. Covariate matrix preparation
 A matrix of covariates used in the beta regression model is needed. The matrix needs to include a column of hugo gene symbol and at least one column of a covariate. An example can be loaded by *invisible(matCV)*.
 
 ```{r, eval = F}
@@ -95,7 +95,7 @@ head(pdr)
 ```
 
 ### 3. Input matrix generation
-As mentioned in the **Prerequisite** section, users need to put DMC.sample_name.txt and PDR.sample_name.txt files in the input_dir folder. Also, a user defined covariates matrix is needed.
+As mentioned in the **Prerequisite** section, users need to put DMC.sample_name.txt and PDR.sample_name.txt files in the input_dir folder. Also, a user defined covariate matrix is needed.
 ```{r, eval = F}
 ds <- makeInputMatrix(names_list = as.list("SRR2069925"),
                 matCV = invisible(matCV),

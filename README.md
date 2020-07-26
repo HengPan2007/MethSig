@@ -134,8 +134,8 @@ If all the CpGs on a specific read are methylated, or all the CpGs on a
 read are unmethylated, the read is classified as concordant; otherwise
 it is classified as discordant. At each CpG, the PDR is equal to the
 number of discordant reads that cover that location divided by the total
-number of reads that cover that location. The PDR of promoter is given
-by averaging the values of individual CpGs, as calculated for all CpGs
+number of reads that cover that location. The promoter PDR is given by
+averaging the values of individual CpGs, as calculated for all CpGs
 within the promoter of interest with equal or greater than 10 reads
 covering at least 4
 CpGs.
@@ -156,7 +156,7 @@ head(pdr)
 
 ### 3\. Input matrix generation
 
-As mentioned in **Prerequisite** section, users need to put
+As mentioned in the **Prerequisite** section, users need to put
 DMC.sample\_name.txt and PDR.sample\_name.txt files in the input\_dir
 folder. Also, a user defined covarites matrix is needed.
 

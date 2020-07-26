@@ -50,7 +50,7 @@ define their own covariates.
 
 ### 3\. Files containing information of hypermethylated cytosines (HCs)
 
-A tab-separated values input file (without a header line) containing
+A tab-separated values input file (without a header line) contains
 details of differentially methylated cytosines (DMCs) with following
 columns (V1 to V11): chr, pos, numC in control, numC + numT in control,
 numC in tumor, numC + numT in tumor, CpG methylation ratio (tumor
@@ -71,7 +71,7 @@ DMC.sample\_name.txt format.
 
 ### 4\. Files containing information of proportion of discordant reads (PDR) at CpGs
 
-A tab-separated values input file containing details of single CpG PDR
+A tab-separated values input file contains details of single CpG PDR
 with following columns: chr, start, strand, ConMethReadCount,
 ConUMethReadCount, DisReadCount, NAReadCount. Details of PDR were
 described in Landau *et al.*, *Cancer Cell*, 2014.

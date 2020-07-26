@@ -52,7 +52,7 @@ head(tmp)
 ```
 
 ### 4. Files containing information of proportion of discordant reads (PDR) at CpGs 
-A tab-separated values input file contains details of single CpG PDR with following columns: chr, start, strand, ConMethReadCount, ConUMethReadCount, DisReadCount, NAReadCount. Details of PDR were described in Landau *et al.*, *Cancer Cell*, 2014. extdata/pdrCall_from_Bismark.py can be used to call PDR of single CpG from Bismark (Krueger *et al.*, *Bioinformatics*, 2011) output files starting with CpG_OB or CpG_OT. An example file can be found in extdata/PDR.SRR2069925.txt. Notably, the name needs to be in PDR.sample_name.txt format.
+A tab-separated values input file contains details of single CpG PDR with following columns: chr, start, strand, ConMethReadCount, ConUMethReadCount, DisReadCount, NAReadCount. Details of PDR were described in Landau *et al.*, *Cancer Cell*, 2014. extdata/pdrCall_from_Bismark.py can be used to call PDR of an individual CpG from Bismark (Krueger *et al.*, *Bioinformatics*, 2011) output files starting with CpG_OB or CpG_OT. An example file can be found in extdata/PDR.SRR2069925.txt. Notably, the name needs to be in PDR.sample_name.txt format.
 
 ```{r, echo=F}
 tmp <- read.table("~/MethSig/inst/extdata/PDR.SRR2069925.txt", header=T, sep="\t")

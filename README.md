@@ -70,10 +70,10 @@ A tab-separated values input file contains details of single CpG PDR
 with following columns: chr, start, strand, ConMethReadCount,
 ConUMethReadCount, DisReadCount, NAReadCount. Details of PDR were
 described in Landau *et al.*, *Cancer Cell*, 2014.
-extdata/pdrCall\_from\_Bismark.py can be used to call PDR of single CpG
-from Bismark (Krueger *et al.*, *Bioinformatics*, 2011) output files
-starting with CpG\_OB or CpG\_OT. An example file can be found in
-extdata/PDR.SRR2069925.txt. Notably, the name needs to be in
+extdata/pdrCall\_from\_Bismark.py can be used to call PDR of an
+individual CpG from Bismark (Krueger *et al.*, *Bioinformatics*, 2011)
+output files starting with CpG\_OB or CpG\_OT. An example file can be
+found in extdata/PDR.SRR2069925.txt. Notably, the name needs to be in
 PDR.sample\_name.txt
     format.
 

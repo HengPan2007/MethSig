@@ -28,7 +28,7 @@ published book chapter (Pan *et al.*, *Cancer Systems Biology*, 2018).
 
 A matrix of covariates used in the beta regression model is needed. The
 matrix needs to include a column of hugo gene symbol and at least one
-column of the covariate. An example can be loaded by *invisible(matCV)*.
+column of a covariate. An example can be loaded by *invisible(matCV)*.
 
 ``` r
 matCV <- invisible(matCV)

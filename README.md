@@ -116,8 +116,8 @@ average DNAme of control samples (false discovery rate = 20%,
 Chi-squared test). Only CpGs with read depth greater than 10 are
 included in the analysis. RRBS data of normal samples is used as
 control. An implemented function *makeHG19Promoters* can be used to
-provide promoter annotations of hg19 RefSeq genes. Users can define
-their own
+provide promoter annotation of hg19 RefSeq genes. Users can define their
+own
 annotation.
 
 ``` r

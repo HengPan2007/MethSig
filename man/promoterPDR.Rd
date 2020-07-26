@@ -25,7 +25,7 @@ A data frame summarizing promoter PDR levels.
     }
 }
 \description{
-Promoter proportion of discordant reads (PDR) was defined as the average PDR of all the CpGs inside.
+Promoter proportion of discordant reads (PDR) is defined as the average PDR of all the CpGs inside.
 }
 \examples{
 promoterPDR(file_name = system.file("extdata", "PDR.SRR2069925.txt", package = "MethSig"),

@@ -17,7 +17,7 @@ Id, Hugo, Covariates included in matCV, PDR_Tumor, Depth_Tumor, CpGs_Tumor and D
 }
 \value{
 A data frame summarizing information of sample-specific hypermethylation inference. Addtional columns
-    were added to the input matrix.
+    are added to the input matrix.
     \itemize{
       \item DHcR_Tumor_Beta: Transformed data of DHcR_Tumor (from [0, 1] to (0, 1))
       \item Beta_Response: Response value estimated by beta regression
@@ -26,8 +26,8 @@ A data frame summarizing information of sample-specific hypermethylation inferen
     }
 }
 \description{
-Expected DHcR was estimated through beta regression model first. Next, expected DHcR was tested
-    against observed DHcR to evalute if there was promoter hypermethylation.
+Expected DHcR is estimated through beta regression model first. Next, expected DHcR is tested
+    against observed DHcR to evalute if there is promoter hypermethylation.
 }
 \examples{
 pvalueBetaReg(formula = 'DHcR_Tumor_Beta~DHcR_Normal+PDR_Normal+GEXP_Normal+Reptime+PDR_Tumor+Depth_Tumor+CpGs_Tumor',

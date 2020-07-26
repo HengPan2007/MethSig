@@ -30,7 +30,7 @@ A data frame summarizing promoter DHcR levels.
     }
 }
 \description{
-Promoter differentially hypermethylated cytosine ratio (DHcR) was defined as the ratio of
+Promoter differentially hypermethylated cytosine ratio (DHcR) is defined as the ratio of
     hypermethylated cytosines (HCs) to the total number of promoter CpGs profiled.
 }
 \examples{

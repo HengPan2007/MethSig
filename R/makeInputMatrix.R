@@ -1,13 +1,12 @@
 #' @title Make input matrix
 #' @description Add DHcR, PDR and sequencing depth information of inferred samples into input matrix.
 #' @param names_list A list of sample names.
-#' @param matCV A matrix of covariates which are included into the analysis. Ideally, users can include any covariate
-#'     that will be correlated with promoter DHcR in tumor samples and a hugo symbol column needs to be included.
-#'     An example can be loaded by using \emph{invisible(matCV)}. This covariate matrix contains following columns:
+#' @param matCV A matrix of covariates included in the analysis. Ideally, users can include any covariate
+#'     and a hugo symbol column. An example can be loaded by using \emph{invisible(matCV)}.
+#'     This covariate matrix contains following columns:
 #'     Hugo, DHcR_Normal, PDR_Normal, GEXP_Normal, Reptime.
 #' @param pro A GRanges object containing promoter annotation.
-#' @param input_dir A string indicating where input files used to calculate DHcR and PDR of all the samples
-#'     are stored.
+#' @param input_dir A string indicating where input files used to calculate DHcR and PDR are stored.
 #'     Input files used to calculate DHcR should be named as DMC.sample_name.txt format.
 #'     Input files used to calculate PDR should be named as PDR.sample_name.txt format.
 #' @param min_cpgs A list of two integer values: the minimum number of CpGs requied by \emph{promoterDHcR} and

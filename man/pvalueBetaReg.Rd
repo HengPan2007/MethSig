@@ -25,8 +25,8 @@ A data frame summarizing information of sample-specific hypermethylation inferen
     }
 }
 \description{
-First, expected DHcR is estimated through beta regression model.
-    Next, expected DHcR is tested against observed DHcR to evalute if there is promoter hypermethylation.
+Expected DHcR is estimated through beta regression model and expected DHcR
+    is tested against observed DHcR to evalute if there is promoter hypermethylation.
 }
 \examples{
 pvalueBetaReg(formula = 'DHcR_Tumor_Beta~DHcR_Normal+PDR_Normal+GEXP_Normal+Reptime+PDR_Tumor+Depth_Tumor+CpGs_Tumor',

@@ -98,7 +98,7 @@ head(pdr)
 ```
 
 ### 3. Input matrix generation
-As mentioned in the **Prerequisite** section, users need to put DMC.sample_name.txt and PDR.sample_name.txt files in the input_dir folder. Also, a user defined covariate matrix is needed.
+As mentioned in the **Prerequisite** section, users need to put DMC.sample_name.txt and PDR.sample_name.txt files in the *input_dir* folder. Also, a user defined covariate matrix is needed.
 ```{r, eval = F}
 ds <- makeInputMatrix(names_list = as.list("SRR2069925"),
                 matCV = invisible(matCV),

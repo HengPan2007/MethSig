@@ -108,9 +108,9 @@ cytosine ratio (DHcR), defined as the ratio of hypermethylated cytosines
 are defined as CpGs at which DNAme is statistically higher than the
 average DNAme of control samples (false discovery rate = 20%,
 Chi-squared test). Only CpGs with read depth greater than 10 are
-included in the analysis. RRBS data of normal samples are used as
+included in the analysis. RRBS data of normal samples is used as
 control. An implemented function *makeHG19Promoters* can be used to
-provide promoter annotations of hg19 RefSeq genes. Users and define
+provide promoter annotations of hg19 RefSeq genes. Users can define
 their own
 annotation.
 

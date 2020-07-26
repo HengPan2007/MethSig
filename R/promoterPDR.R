@@ -1,6 +1,6 @@
 #' @title Calculate promoter PDR
 #' @description Promoter proportion of discordant reads (PDR) is defined as the average PDR of all the CpGs inside.
-#' @param file_name A tab-separated values input file. The input file contains details of single CpG PDR with
+#' @param file_name A tab-separated values input file containing details of single CpG PDR with
 #'     following columns: chr, start, strand, ConMethReadCount, ConUMethReadCount, DisReadCount, NAReadCount.
 #'     Details of PDR were described in Landau \emph{et al.}, \emph{Cancer Cell}, 2014.
 #'     extdata/pdrCall_from_Bismark.py can be used to call PDR of single CpG from

@@ -7,7 +7,7 @@
 promoterDHcR(file_name, pro, min_cpgs = 5)
 }
 \arguments{
-\item{file_name}{A tab-separated values input file (without a header line). The input file contains
+\item{file_name}{A tab-separated values input file (without a header line) containing
 details of differentially methylated cytosines (DMCs) with following columns (V1 to V11):
 chr, pos, numC in control, numC + numT in control, numC in tumor, numC + numT in tumor,
 CpG methylation ratio (tumor methylation / control methylation),

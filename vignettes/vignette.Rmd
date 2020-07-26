@@ -109,7 +109,10 @@ head(invisible(pvalByGenePt))
 
 ### Cohort-prevalent hypermethylation inference
 Wilkinson p-value combination method is used to determine if promoter hypermethylation is over-represented in the cohort. To eliminate the effect of cohort size on p-value combination results, MethSig randomly samples equal number of patients iteratively and uses lower quartile of combined p-values to infer hypermethylation.
-```{r}
+```{r, eval = F}
 pval <- pvalueCombine(data = invisible(pvalByGenePt))
 head(pval)
+```
+```{r, echo = F}
+head(invisible(pvalueCombine()))
 ```

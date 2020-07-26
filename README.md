@@ -5,6 +5,9 @@ Heng Pan
 
 ## Setup
 
+Please use the latest R version. If an old version is used, users may
+need to install dependencies manually.
+
 ``` r
 setRepositories(ind = 1:2)
 install.packages("devtools")

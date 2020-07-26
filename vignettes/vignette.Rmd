@@ -78,31 +78,38 @@ head(dhcr)
 ### 2. Calculate promoter PDR
 If all the CpGs on a specific read are methylated, or all the CpGs on a read are unmethylated, the read is classified as concordant; otherwise it is classified as discordant. At each CpG, the PDR is equal to the number of discordant reads that cover that location divided by the total number of reads that cover that location. The PDR of promoter is given by averaging the values of individual CpGs, as calculated for all CpGs within the promoter of interest with read depth greater than 10 reads and that are covered by reads that contain at least 4 CpGs.
 
-```{r, eval=F}
+```{r}
 pdr <- promoterPDR(file_name = system.file("extdata", "PDR.SRR2069925.txt", package = "MethSig"),
                    pro = makeHG19Promoters())
 head(pdr)
 ```
 
 ### 3. Make input matrix
-As mentioned in Prerequisite section, users need to store DMC.Sample_name.txt and PDR.Sample_name.txt files in the input_dir folder. Also, a user defined covarites matrix is needed.
-```{r, eval=F}
-ds <- makeInputMatrix(names_list=as.list(c("SRR2069925")), matCV = invisible(matCV), 
-                      pro = makeHG19Promoters(), input_dir = '~/MethSig/inst/extdata/')
+As mentioned in **Prerequisite** section, users need to put DMC.sample_name.txt and PDR.sample_name.txt files in the input_dir folder. Also, a user defined covarites matrix is needed.
+```{r, eval = F}
+ds <- makeInputMatrix(names_list = as.list('SRR2069925'),
+                matCV = invisible(matCV),
+                pro = makeHG19Promoters(),
+                input_dir = system.file("extdata", "", package = "MethSig"))
 head(ds)
 ```
-
-### Patient-specific hypermethylation inference
-Expected promoter DHcR of tumor samples was estimated by beta-regression model and expected DHcR was tested against observed DHcR to infer hypermethylation status.
-```{r, eval=F}
+```{r, echo = F}
+head(invisible(inputMat))
+```
+### Sample-specific hypermethylation inference
+Expected promoter DHcR of tumor samples is estimated by beta regression model and expected DHcR is tested against observed DHcR to infer hypermethylation status.
+```{r, eval = F}
 pval <- pvalueBetaReg(formula = as.formula('DHcR_Tumor_Beta~DHcR_Normal+PDR_Normal+GEXP_Normal+Reptime+PDR_Tumor+Depth_Tumor+CpGs_Tumor'),
                       data = invisible(inputMat))
 head(pval)
 ```
+```{r, echo = F}
+head(invisible(pvalByGenePt))
+```
 
 ### Cohort-prevalent hypermethylation inference
-Wilkinson p-value combination method was used to determine if promoter hypermethylation is over-represented in the cohort.
-```{r, eval=F}
-pval <- pvalueCombine(data = invisible(pvalByGenePt), K = 10, times = 100, r = 2)
+Wilkinson p-value combination method is used to determine if promoter hypermethylation is over-represented in the cohort. To eliminate the effect of cohort size on p-value combination results, MethSig randomly samples equal number of patients iteratively and uses lower quartile of combined p-values to infer hypermethylation.
+```{r}
+pval <- pvalueCombine(data = invisible(pvalByGenePt))
 head(pval)
 ```

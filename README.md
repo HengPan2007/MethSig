@@ -124,15 +124,14 @@ annotation.
 dhcr <- promoterDHcR(file_name = system.file("extdata", "DMC.SRR2069925.txt", package = "MethSig"),
                      pro = makeHG19Promoters())
 head(dhcr)
+#>       Hugo    Depth HCs CpGs  DHcR
+#> 41  ABCB10 44.91818   0  110 0.000
+#> 62   ABCD3 38.69118   0   68 0.000
+#> 93    ABL2 36.35714   0   28 0.000
+#> 113  ACADM 32.36364   0   33 0.000
+#> 120  ACAP3 40.36500   5  200 0.025
+#> 123  ACBD3 36.91892   0   37 0.000
 ```
-
-    #>       Hugo    Depth HCs CpGs  DHcR
-    #> 41  ABCB10 44.91818   0  110 0.000
-    #> 62   ABCD3 38.69118   0   68 0.000
-    #> 93    ABL2 36.35714   0   28 0.000
-    #> 113  ACADM 32.36364   0   33 0.000
-    #> 120  ACAP3 40.36500   5  200 0.025
-    #> 123  ACBD3 36.91892   0   37 0.000
 
 ### 2\. Promoter PDR calculation
 
@@ -150,15 +149,14 @@ CpGs.
 pdr <- promoterPDR(file_name = system.file("extdata", "PDR.SRR2069925.txt", package = "MethSig"),
                    pro = makeHG19Promoters())
 head(pdr)
+#>       Hugo        PDR
+#> 41  ABCB10 0.06439566
+#> 58   ABCC8 0.33333333
+#> 62   ABCD3 0.02900665
+#> 88    ABI1 0.04192547
+#> 93    ABL2 0.02704556
+#> 103  ABTB2 0.04380624
 ```
-
-    #>       Hugo        PDR
-    #> 41  ABCB10 0.06439566
-    #> 58   ABCC8 0.33333333
-    #> 62   ABCD3 0.02900665
-    #> 88    ABI1 0.04192547
-    #> 93    ABL2 0.02704556
-    #> 103  ABTB2 0.04380624
 
 ### 3\. Input matrix generation
 

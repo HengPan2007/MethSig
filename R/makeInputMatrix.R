@@ -1,5 +1,5 @@
 #' @title Make input matrix
-#' @description Add DHcR, PDR and sequencing depth information of samples to be inferred into input matrix.
+#' @description Add DHcR, PDR and sequencing depth information of inferred samples into input matrix.
 #' @param names_list A list of sample names.
 #' @param matCV A matrix of covariates which are included into the analysis. Ideally, users can include any covariate
 #'     that will be correlated with promoter DHcR in tumor samples and a hugo symbol column needs to be included.

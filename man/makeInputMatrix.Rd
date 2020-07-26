@@ -37,7 +37,7 @@ A data frame used as input for sample-specific hypermethylation inference.
     }
 }
 \description{
-Add DHcR, PDR and sequencing depth information of samples to be inferred into input matrix.
+Add DHcR, PDR and sequencing depth information of inferred samples into input matrix.
 }
 \examples{
 makeInputMatrix(names_list = as.list('SRR2069925'),

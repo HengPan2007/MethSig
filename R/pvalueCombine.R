@@ -34,6 +34,7 @@ pvalueCombine <- function(data, K=10, times=100, r=2) {
         tmp <- metap::wilkinsonp(pval.curr, r=r, alpha=0.05)
         return(tmp$p)
       }
+      set.seed(1)
       pval.curr <- sapply(rep(K, times), pvalSub, pval=pval)
       p.75 <- quantile(pval.curr, probs=0.25)
     }

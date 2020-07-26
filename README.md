@@ -239,8 +239,8 @@ head(pval)
 
     #>              Hugo Rank Sample_Size       Pvalue      Padjust
     #> HIST1H3E HIST1H3E    1          23 2.109371e-28 2.300269e-24
-    #> PCDHGB7   PCDHGB7    2          18 7.069669e-28 3.210187e-24
-    #> CARTPT     CARTPT    3          22 8.831325e-28 3.210187e-24
-    #> TMPRSS12 TMPRSS12    4          22 3.647620e-27 8.078755e-24
+    #> PCDHGB7   PCDHGB7    2          18 7.069669e-28 3.854737e-24
+    #> TRIM59     TRIM59    3          24 1.561732e-27 5.676895e-24
+    #> TMPRSS12 TMPRSS12    4          22 2.244860e-27 6.120050e-24
     #> ELF3         ELF3    5          24 3.704152e-27 8.078755e-24
     #> CYP4F8     CYP4F8    6          12 5.184899e-27 8.224423e-24

@@ -114,5 +114,5 @@ pval <- pvalueCombine(data = invisible(pvalByGenePt))
 head(pval)
 ```
 ```{r, echo = F}
-head(invisible(pvalueCombine()))
+head(invisible(pvalueC))
 ```

@@ -106,7 +106,7 @@ head(ds)
 ```{r, echo = F}
 head(invisible(inputMat))
 ```
-### Sample-specific hypermethylation inference
+## Sample-specific hypermethylation inference
 Expected promoter DHcR of tumor samples is estimated by beta regression model and expected DHcR is tested against observed DHcR to infer hypermethylation status.
 ```{r, eval = F}
 pval <- pvalueBetaReg(formula = as.formula("DHcR_Tumor_Beta~DHcR_Normal+PDR_Normal+GEXP_Normal+Reptime+PDR_Tumor+Depth_Tumor+CpGs_Tumor"),
@@ -117,7 +117,7 @@ head(pval)
 head(invisible(pvalByGenePt))
 ```
 
-### Cohort-prevalent hypermethylation inference
+## Cohort-prevalent hypermethylation inference
 Wilkinson p-value combination method is used to determine if promoter hypermethylation is over-represented in the cohort. To eliminate the effect of cohort size on p-value combination results, MethSig randomly samples equal number of patients iteratively and uses lower quartile of combined p-values to infer hypermethylation.
 ```{r, eval = F}
 pval <- pvalueCombine(data = invisible(pvalByGenePt))

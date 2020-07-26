@@ -183,7 +183,7 @@ head(ds)
     #> 5    30.52174         23 0.08695652
     #> 6    46.37500         48 0.02083333
 
-### Sample-specific hypermethylation inference
+## Sample-specific hypermethylation inference
 
 Expected promoter DHcR of tumor samples is estimated by beta regression
 model and expected DHcR is tested against observed DHcR to infer
@@ -218,7 +218,7 @@ head(pval)
     #> 5       3.079141 0.1427462
     #> 6       3.079141 0.3724881
 
-### Cohort-prevalent hypermethylation inference
+## Cohort-prevalent hypermethylation inference
 
 Wilkinson p-value combination method is used to determine if promoter
 hypermethylation is over-represented in the cohort. To eliminate the

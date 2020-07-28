@@ -1,14 +1,15 @@
 Introduction to MethSig
 ================
 Heng Pan
-2020-07-26
+2020-07-28
 
 ## Setup
 
 ``` r
 setRepositories(ind = 1:2)
 install.packages("devtools")
-devtools::install_github("HengPan2007/MethSig", build_vignettes = T)
+devtools::install_github("HengPan2007/MethSig", build_vignettes = T, 
+                         repos=c(getOption("repos"), "https://bioconductor.org/packages/3.11/bioc"))
 library(MethSig)
 ```
 

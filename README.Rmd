@@ -24,17 +24,16 @@ library(MethSig)
 ```{r, eval = F}
 setRepositories(ind = 1:2)
 install.packages("devtools")
-devtools::install_github("HengPan2007/MethSig", build_vignettes = T, 
-                         repos=c(getOption("repos"), "https://bioconductor.org/packages/3.11/bioc"))
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("GenomeInfoDbData")
+devtools::install_github("HengPan2007/MethSig", build_vignettes = T)
 library(MethSig)
 ```
 
 The latest R version (R-4.0.2) is recommended. If an old version is used, users may need to install dependencies manually. For example, if R-3.6.3 is used, *mnormt* and *GenomeInfoDbData* need to be installed first.
 ```{r, eval = F}
 install.packages("https://cran.r-project.org/src/contrib/Archive/mnormt/mnormt_1.5-7.tar.gz", repos=NULL)
-if (!requireNamespace("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
-BiocManager::install("GenomeInfoDbData")
 ```
 
 ## Introduction

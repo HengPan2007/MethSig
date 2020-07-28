@@ -8,8 +8,10 @@ Heng Pan
 ``` r
 setRepositories(ind = 1:2)
 install.packages("devtools")
-devtools::install_github("HengPan2007/MethSig", build_vignettes = T, 
-                         repos=c(getOption("repos"), "https://bioconductor.org/packages/3.11/bioc"))
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("GenomeInfoDbData")
+devtools::install_github("HengPan2007/MethSig", build_vignettes = T)
 library(MethSig)
 ```
 
@@ -20,9 +22,6 @@ first.
 
 ``` r
 install.packages("https://cran.r-project.org/src/contrib/Archive/mnormt/mnormt_1.5-7.tar.gz", repos=NULL)
-if (!requireNamespace("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
-BiocManager::install("GenomeInfoDbData")
 ```
 
 ## Introduction

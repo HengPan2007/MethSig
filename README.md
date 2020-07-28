@@ -17,7 +17,7 @@ library(MethSig)
 
 The latest R version (R-4.0.2) is recommended. If an old version is
 used, users may need to install dependencies manually. For example, if
-R-3.6.3 is used, *mnormt* and *GenomeInfoDbData* need to be installed
+R-3.6.3 is used, *mnormt* need to be installed
 first.
 
 ``` r

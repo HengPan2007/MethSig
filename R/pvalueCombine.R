@@ -50,5 +50,6 @@ pvalueCombine <- function(data, K=10, times=100, r=2) {
   pval <- pval[,c('Hugo', 'Rank', 'sampleSize', 'pvalue')]
   colnames(pval) <- c('Hugo', 'Rank', 'Sample_Size', 'Pvalue')
   pval$Padjust <- p.adjust(pval$Pvalue, method='BH')
+  rownames(pval) <- pval$Rank
   return(pval)
 }
